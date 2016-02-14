@@ -42,6 +42,12 @@ python setup.py build
 sudo python setup.py install
 cd ..
 
+sudo apt-get install tor
+git clone https://github.com/seanthegeek/routetor.git
+cd routetor
+for i in `ls |grep tor`;do sudo cp -v $i /usr/sbin/$i ;done
+cd ..
+
 sudo mkdir -p /usr/local/suricata/bin
 sudo mkdir -p /usr/local/suricata/lib
 sudo mkdir -p /usr/local/suricata/lib
