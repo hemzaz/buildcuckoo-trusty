@@ -42,7 +42,7 @@ python setup.py build
 sudo python setup.py install
 cd ..
 
-sudo apt-get install tor
+sudo apt-get -y install tor
 git clone https://github.com/seanthegeek/routetor.git
 cd routetor
 for i in `ls |grep tor`;do sudo cp -v $i /usr/sbin/$i ;done
