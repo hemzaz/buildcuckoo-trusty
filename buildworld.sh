@@ -166,7 +166,7 @@ sudo pkill -f "/data/moloch/elasticsearch"
 
 
 #sudo git clone https://github.com/EmergingThreats/cuckoo-1.1.git /data/cuckoo
-git clone https://github.com/wmetcalf/cuckoo-modified cuckoo
+git clone https://github.com/spender-sandbox/cuckoo-modified.git cuckoo
 cd cuckoo/utils
 ./community.py -a -f
 cd ../..
