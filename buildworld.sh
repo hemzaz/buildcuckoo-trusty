@@ -272,7 +272,7 @@ wget -q http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc -O- | s
 sudo apt-get update
 sudo apt-get install virtualbox-5.0 -y
 
-echo xfce4-session > ~/.xsession
+#echo xfce4-session > ~/.xsession
 sudo service xrdp restart
 
 sudo virsh net-destroy default
