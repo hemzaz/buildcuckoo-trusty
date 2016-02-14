@@ -5,7 +5,7 @@ if ["$cuckoopass" = ""]; then
  echo "you didn't enter a password exiting"
  exit
 else
- echo "create database cuckoo;
+ echo "create schema cuckoo;
  grant all privileges on cuckoo.* to cuckoo@localhost identified by '$cuckoopass';
  flush privileges;
  quit;" > dbsetup.txt
