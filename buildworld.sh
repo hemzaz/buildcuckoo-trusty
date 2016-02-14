@@ -167,7 +167,7 @@ ruleupdates.sh
 
 wget https://download.elasticsearch.org/elasticsearch/release/org/elasticsearch/distribution/deb/elasticsearch/2.2.0/elasticsearch-2.2.0.deb
 sudo dpkg -i elasticsearch-2.2.0.deb
-sudo apt-get -f install
+sudo apt-get -y -f install
 sudo update-rc.d elasticsearch defaults
 sudo service elasticsearch start
 tar -xzvf moloch.tar.gz
