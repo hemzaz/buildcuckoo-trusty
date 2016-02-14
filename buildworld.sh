@@ -211,9 +211,9 @@ sudo ovs-vsctl -- --may-exist add-port lan0 dummy0
 sudo ovs-vsctl -- --id=@p get port dummy0 -- --id=@m create mirror name=mirror0 select_all=1 -- add bridge lan0 mirrors @m -- set mirror mirror0 output_port=@p
 #mgmt
 sudo ovs-vsctl add-port lan0 lan0hp0 -- set interface lan0hp0 type=internal
-sudo ip addr add 192.168.1.1 dev lan0hp0
+sudo ip addr add 192.168.5.1 dev lan0hp0
 sudo ip link set lan0hp0 up
-sudo ip route add 192.168.1.0/24 dev lan0hp0
+sudo ip route add 192.168.5.0/24 dev lan0hp0
 
 chmod +x services/*
 sudo cp services/* /etc/init.d/
