@@ -118,6 +118,7 @@ sudo cp classification.config /usr/local/suricata/etc/
 cd ..
 
 echo "alert http any any -> any any (msg:\"FILE store all\"; filestore; flowbits:noalert; sid:44444; rev:1;)" > local.rules
+echo "alert http any any -> any any (msg:\"FILE store all\"; filestore; flowbits:noalert sid:15; rev:1;)" >> local.rules
 sudo cp local.rules /usr/local/suricata/etc/
 #cp rules/files.rules /usr/local/suricata/etc/etpro/
 
