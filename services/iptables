@@ -40,9 +40,9 @@ $IPTABLES -F
 $IPTABLES -F -t nat
 $IPTABLES -X
 $IPTABLES -X -t nat
-$IPTABLES -P INPUT DROP
+$IPTABLES -P INPUT ACCEPT
 $IPTABLES -P OUTPUT ACCEPT
-$IPTABLES -P FORWARD DROP
+$IPTABLES -P FORWARD ACCEPT
 
 ###############################################################################
 ### INPUT
