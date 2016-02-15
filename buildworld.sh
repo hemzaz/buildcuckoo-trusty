@@ -141,7 +141,7 @@ sid_msg=/usr/local/suricata/etc/sid-msg.map
 sid_changelog=/usr/local/suricata/var/log/etpro_sid_changes.log
 disablesid=/usr/local/suricata/etc/disablesid.conf
 engine=suricata
-suricata_version=2.0.4
+suricata_version=3.0.0
 version=0.6.0
 " > pp.config
 
