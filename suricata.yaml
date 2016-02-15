@@ -4,25 +4,25 @@ runmode: single
 default-log-dir: /usr/local/suricata/var/log/
 outputs:
   - fast:
-      enabled: no 
+      enabled: yes 
       filename: alert 
       append: yes
   - unified2-alert:
-      enabled: no 
+      enabled: yes 
       filename: unified2.alert
   - http-log:
-      enabled: no
+      enabled: yes
       filename: http.log
       append: yes
       extended: yes
   - pcap-info:
-      enabled: no 
+      enabled: yes 
   - alert-debug:
-      enabled: no
+      enabled: yes
       filename: alert-debug.log
       append: yes
   - stats:
-      enabled: no 
+      enabled: yes
       filename: stats.log
       interval: 8
   - file-store:
@@ -37,7 +37,7 @@ outputs:
       force-magic: yes   # force logging magic on all logged files
       force-md5: yes     # force logging of md5 checksums
   - tls-log:
-      enabled: no  # Log TLS connections.
+      enabled: yes  # Log TLS connections.
       filename: tls.log # File to store TLS logs.
       extended: yes # Log extended information like fingerprint
   - eve-log:
@@ -234,6 +234,9 @@ logging:
   outputs:
   - console:
       enabled: yes
+  - file:
+      enabled: yes
+      filename: /var/log/suricata.log
 
 pfring:
   - interface: eth0
