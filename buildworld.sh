@@ -177,6 +177,13 @@ cd ..
 sudo pkill -f "/data/moloch/bin/node viewer.js"
 sudo pkill -f "/data/moloch/elasticsearch"
 
+git clone https://github.com/rieck/malheur.git
+cd malheur
+sudo ./bootstrap
+sudo ./configure --prefix=/usr
+sudo make
+sudo make install
+cd .. 
 
 #sudo git clone https://github.com/EmergingThreats/cuckoo-1.1.git /data/cuckoo
 git clone https://github.com/spender-sandbox/cuckoo-modified.git cuckoo
