@@ -86,7 +86,7 @@ $IPTABLES -A FORWARD -p ALL -m state --state ESTABLISHED,RELATED -j ACCEPT
 $IPTABLES -A FORWARD -p ALL -i $ZOMBIEIF -o $RTRIF -j ACCEPT
 $IPTABLES -A FORWARD -p tcp -o $ZOMBIEIF --dport 2042:2052 -j ACCEPT 
 $IPTABLES -A FORWARD -j LOG --log-level notice --log-prefix "FORWARD DROP: "
-$IPTABLES -A FORWARD -o eth0 -i vboxnet0 -s 192.168.56.0/24 -m conntrack --cstate new -j ACCEPT
+$IPTABLES -A FORWARD -o eth0 -i vboxnet0 -s 192.168.56.0/24 -m conntrack --cstate NEW -j ACCEPT
 $IPTABLES -A FORWARD -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
 $IPTABLES -A POSTROUTING -t nat -j MASQUERADE
 ###############################################################################
