@@ -1,5 +1,6 @@
 %YAML 1.1
 ---
+pid-file: /usr/local/suricata/var/run/suricata.pid
 runmode: single 
 default-log-dir: /usr/local/suricata/var/log/
 outputs:
