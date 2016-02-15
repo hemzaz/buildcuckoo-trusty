@@ -180,6 +180,7 @@ cd ..
 sudo pkill -f "/data/moloch/bin/node viewer.js"
 sudo pkill -f "/data/moloch/elasticsearch"
 
+sudo apt-get -y install uthash-dev libconfig-dev libarchive-dev libtool autoconf automake zlib1g-dev checkinstall
 git clone https://github.com/rieck/malheur.git
 cd malheur
 sudo ./bootstrap
