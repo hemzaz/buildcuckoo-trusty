@@ -118,6 +118,7 @@ sudo cp ../suricata.yaml /usr/local/suricata/etc/
 sudo cp reference.config /usr/local/suricata/etc/
 sudo cp classification.config /usr/local/suricata/etc/
 cd ..
+sudo ethtool -K eth0 gro off lro off
 
 echo "alert http any any -> any any (msg:\"FILE store all\"; filestore; flowbits:noalert; sid:44444; rev:1;)" > local.rules
 echo "alert http any any -> any any (msg:\"FILE store all\"; filestore; flowbits:noalert sid:15; rev:1;)" >> local.rules
