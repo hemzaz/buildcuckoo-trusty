@@ -1,23 +1,23 @@
 # buildcuckoo-trusty
-Automated cuckoo build,
-This Automated script uses cuckoo-modified from brad,
-The installation tested on ubuntu 14.04 and its quite straight forward
+Automated cuckoo build,<br />
+This Automated script uses cuckoo-modified from brad,<br />
+The installation tested on ubuntu 14.04 and its quite straight forward.<br />
 
-#prequisites:
-ubuntu 14.04 machine with user named "cuckoo", VT-X/vhv enabled, internet,oracle java8 and 100GB free disk space at least.
+#prequisites:<br />
+ubuntu 14.04 machine with user named "cuckoo", VT-X/vhv enabled, internet,oracle java8 and 100GB free disk space at least.<br />
 
-#installation
-git clone https://github.com/hemzaz/buildcuckoo-trusty.git
-cd buildcuckoo-trusty
-./buildworld.sh
-cd ..
-**important**
-make sure that cuckoo is in vboxusers group and can access to all app directories
+#installation<br />
+git clone https://github.com/hemzaz/buildcuckoo-trusty.git <br />
+cd buildcuckoo-trusty <br />
+./buildworld.sh <br />
+cd .. <br />
+**important** <br />
+make sure that cuckoo is in vboxusers group and can access to all app directories <br />
 
-#database creation
-run the script setupmysql.sh, provide valid credentials, save the connection string for the sandbox configuration
+#database creation <br />
+run the script setupmysql.sh, provide valid credentials, save the connection string for the sandbox configuration <br />
 
-#sandbox configuration
+#sandbox configuration <br />
 Edit /usr/local/suricata/etc/suricata.yaml according to your network, machine and needs
 Edit /etc/tor/torrc - tor configuration to set tor routing for your sandbox
 Edit /data/cuckoo/conf/cuckoo.conf, paste the mysql connetion string under the corresponding block
