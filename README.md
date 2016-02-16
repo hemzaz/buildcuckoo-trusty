@@ -40,6 +40,10 @@ At the end take a snapshot of the machine and call it running
 Shutdown the machine and restore from the freshly born snapshot. <br />
 
 #SANDBOX STARTING <br />
+Ensure that suricata is up and running with ps aux |grep -i suricata - if not, start it with /etc/init.d/suricata start <br />
+run /etc/init.d/iptables start <br />
+Run sudo /sbin/routetor & <br />
+Run sudo torstart <your vboxnet0 interface ip>
 Under cuckoo directory run python cuckoo.py -d <br />
 Under cuckoo/web directory run python manage.py runserver 0.0.0.0:8000 <br />
 Under cuckoo/utils directory run python api.py -H 0.0.0.0:8090 <br />
