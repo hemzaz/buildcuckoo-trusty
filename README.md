@@ -1,6 +1,6 @@
 # buildcuckoo-trusty
-Automated cuckoo build
-This Automated script uses cuckoo-modified from brad
+Automated cuckoo build,
+This Automated script uses cuckoo-modified from brad,
 The installation tested on ubuntu 14.04 and its quite straight forward
 
 #prequisites:
