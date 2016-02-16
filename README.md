@@ -22,8 +22,7 @@ Edit /usr/local/suricata/etc/suricata.yaml according to your network, machine an
 Edit /etc/tor/torrc - tor configuration to set tor routing for your sandbox <br />
 Edit /data/cuckoo/conf/cuckoo.conf, paste the mysql connetion string under the corresponding block <br />
 Edit /data/cuckoo/conf/api.conf, enable all wanted api interface options <br />
-Edit /data/cuckoo/conf/processing.conf, enable suricata, set the path to suricata executables and configuration file, uncomment wanted log moudles <br />
-enable virustotal lookup and place your private API key if you have. <br />
+Edit /data/cuckoo/conf/processing.conf, enable suricata, set the path to suricata executables and configuration file, uncomment wanted log moudles, enable virustotal lookup and place your private API key if you have. <br />
 Edit /data/cuckoo/conf/reporting.conf, enable all html modules, pdf creation module and mongo module <br />
 Edit /data/cuckoo/conf/virtualbox.conf, fill in your virtual machine details, name, alias, tag, snapshot name, architecture, memory profile and ip address <br />
 Edit /data/cuckoo/conf/auxiliary.conf, enable virustotal dl - place your api key if you do have one, enable display_et_portal/display_pt_portal <br />
