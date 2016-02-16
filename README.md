@@ -4,7 +4,7 @@ This Automated script uses cuckoo-modified from brad,<br />
 The installation tested on ubuntu 14.04 and its quite straight forward.<br />
 
 #PREQUISITES:<br />
-ubuntu 14.04 machine with user named "cuckoo", VT-X/vhv enabled, internet,oracle java8 and 100GB free disk space at least.<br />
+Ubuntu 14.04 machine with user named "cuckoo", VT-X/vhv enabled, Internet, Oracle java8 and 100GB free disk space at least.<br />
 
 #INSTALLATION<br />
 git clone https://github.com/hemzaz/buildcuckoo-trusty.git <br />
