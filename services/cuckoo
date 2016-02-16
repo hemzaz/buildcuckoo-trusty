@@ -10,8 +10,8 @@
 
 case "$1" in
   start)
-    cd /data/cuckoo/ && screen -d -m ./cuckoo.py
-    cd /data/cuckoo/web && screen -d -m python manage.py runserver 0.0.0.0:8080
+    su cuckoo -c "cd /data/cuckoo/ && screen -d -m ./cuckoo.py"
+    su cuckoo -c "cd /data/cuckoo/web && screen -d -m python manage.py runserver 0.0.0.0:8080"
 ;;
   stop)
     pkill -f "SCREEN -d -m ./cuckoo.py"
