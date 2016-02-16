@@ -27,7 +27,8 @@ Edit /data/cuckoo/conf/reporting.conf, enable all html modules, pdf creation mod
 Edit /data/cuckoo/conf/virtualbox.conf, fill in your virtual machine details, name, alias, tag, snapshot name, architecture, memory profile and ip address <br />
 Edit /data/cuckoo/conf/auxiliary.conf, enable virustotal dl - place your api key if you do have one, enable display_et_portal/display_pt_portal <br />
 
-#VIRTUALBOX CONFIGURATION (the traditional way [there is an other way which involvs some black magic (:])<br />
+#VIRTUALBOX CONFIGURATION <br /> 
+#(the traditional way indeed [there is an other way which involvs some black magic :)])<br />
 create host only interface called vboxnet0 <br />
 create machine and assign the hostonly interface to the machine <br />
 assign static ip address as you filled in virtualbox.conf <br />
