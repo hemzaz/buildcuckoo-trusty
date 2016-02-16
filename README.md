@@ -29,18 +29,18 @@ Edit /data/cuckoo/conf/auxiliary.conf, enable virustotal dl - place your api key
 
 #VIRTUALBOX CONFIGURATION <br /> 
 #(the traditional way indeed [there is an other way which involvs some black magic :)])<br />
-create host only interface called vboxnet0 <br />
-create machine and assign the hostonly interface to the machine <br />
-assign static ip address as you filled in virtualbox.conf <br />
-assign dns server addresses as vboxnet0 as primary and 8.8.8.8 as secondary
-install your wanted software profile, flash, chrome, java, etc <br />
-enable autologon <br />
-disable ie welcome screen <br />
-at the end take a snapshot of the machine and call it running
-shutdown the machine and restore from the freshly born snapshot. <br />
+Create host only interface called vboxnet0 <br />
+Create machine and assign the hostonly interface to the machine <br />
+Assign static ip address as you filled in virtualbox.conf <br />
+Assign dns server addresses as vboxnet0 as primary and 8.8.8.8 as secondary
+Install your wanted software profile, flash, chrome, java, etc <br />
+Enable autologon <br />
+Disable ie welcome screen <br />
+At the end take a snapshot of the machine and call it running
+Shutdown the machine and restore from the freshly born snapshot. <br />
 
 #SANDBOX STARTING <br />
-under cuckoo directory run python cuckoo.py -d <br />
-under cuckoo/web directory run python manage.py runserver 0.0.0.0:8000 <br />
-under cuckoo/utils directory run python api.py -H 0.0.0.0:8090 <br />
-VOILA! you can submit samples now! brows to http://yourcuckooserver:8000 and start playing!
+Under cuckoo directory run python cuckoo.py -d <br />
+Under cuckoo/web directory run python manage.py runserver 0.0.0.0:8000 <br />
+Under cuckoo/utils directory run python api.py -H 0.0.0.0:8090 <br />
+VOILA! you can submit samples now! browse to http://yourcuckooserver:8000 and start playing!
