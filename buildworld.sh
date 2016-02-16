@@ -271,7 +271,7 @@ exit 0" | sudo tee /etc/rc.local
 echo "add_dbs=\"https://raw.githubusercontent.com/wmetcalf/clam-punch/master/miscreantpunch099.ldb\"" |sudo tee -a /usr/share/clamav-unofficial-sigs/conf.d/00-clamav-unofficial-sigs.conf
 sudo -u clamav /usr/sbin/clamav-unofficial-sigs
 
-CURRENT_USER=`whoami`
+CURRENT_USER=`cuckoo`
 sudo chown $CURRENT_USER:$CURRENT_USER /usr/local/suricata/ -Rf
 sudo chown $CURRENT_USER:$CURRENT_USER /data/moloch -Rf
 sudo chown $CURRENT_USER:$CURRENT_USER /data/cuckoo -Rf
