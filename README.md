@@ -39,6 +39,24 @@ Disable ie welcome screen <br />
 At the end take a snapshot of the machine and call it running
 Shutdown the machine and restore from the freshly born snapshot. <br />
 
+#MOLOCH CONFIGURATION <br />
+Start moloch and elasticsearch services with: /etc/init.d/moloch start <br />
+Browse into /data/moloch <br />
+Edit etc/config.ini  <br />
+Set a listening address <br />
+add a BPF filter to except your own network from being sniffed <br />
+Under bpf= add not src net (<your ur own eth0 network>/24) and dst net (<your own eth0 network>/24)<br />
+Ensure that elasticsearch service is running.(moloch is shipped with it's own elasticsearch service so there is no need to install from repo) <br />
+Run moloch_init.sh script in order to initialize the local elasticsearch db <br />
+Run moloch_add_user.sh script in order to create user and password for moloch <br />
+Restart moloch_add_user.sh and elasticsearch services with /etc/init.d/moloch restart <br />
+Browse to https://localhost:8005 and ensure that moloch is up and running <br />
+*moloch integration to cuckoo* <br />
+Edit /data/cuckoo/conf/reporting.conf <br />
+Locate the block that refers to moloch <br />
+Enable moloch, set moloch address, credentials and elasticsearch instance name (derived from moloch starting script)<br />
+Restart cuckoo services and ensure its added to the web dashboard<br />
+
 #SANDBOX STARTING <br />
 Ensure that suricata is up and running with ps aux |grep -i suricata - if not, start it with /etc/init.d/suricata start <br />
 run /etc/init.d/iptables start <br />
