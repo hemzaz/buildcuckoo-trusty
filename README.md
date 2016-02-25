@@ -21,6 +21,7 @@ run the script setupmysql.sh, provide valid credentials, save the connection str
 Edit /usr/local/suricata/etc/suricata.yaml according to your network, machine and needs <br />
 Edit /etc/tor/torrc - tor configuration to set tor routing for your sandbox <br />
 Edit /data/cuckoo/conf/cuckoo.conf, paste the mysql connetion string under the corresponding block <br />
+Edit /data/cuckoo/conf/cuckoo.conf, set your own host ip as a result server, leave port 2042 alone, under the corresponding block <br />
 Edit /data/cuckoo/conf/api.conf, enable all wanted api interface options <br />
 Edit /data/cuckoo/conf/processing.conf, enable suricata, set the path to suricata executables and configuration file, uncomment wanted log moudles, enable virustotal lookup and place your private API key if you have. <br />
 Edit /data/cuckoo/conf/reporting.conf, enable all html modules, pdf creation module and mongo module <br />
@@ -45,7 +46,7 @@ Browse into /data/moloch <br />
 Edit etc/config.ini  <br />
 Set a listening address <br />
 add a BPF filter to except your own network from being sniffed <br />
-Under bpf= add not src net (<your ur own eth0 network>/24) and dst net (<your own eth0 network>/24)<br />
+Under bpf= add not src net (<your own eth0 network>/24) and dst net (<your own eth0 network>/24)<br />
 Ensure that elasticsearch service is running.(moloch is shipped with it's own elasticsearch service so there is no need to install from repo) <br />
 Run moloch_init.sh script in order to initialize the local elasticsearch db <br />
 Run moloch_add_user.sh script in order to create user and password for moloch <br />
@@ -60,8 +61,9 @@ Restart cuckoo services and ensure its added to the web dashboard<br />
 #SANDBOX STARTING <br />
 Ensure that suricata is up and running with ps aux |grep -i suricata - if not, start it with /etc/init.d/suricata start <br />
 run /etc/init.d/iptables start <br />
-Run sudo /sbin/routetor & <br />
-Run sudo torstart <your vboxnet0 interface ip>
+Run sudo /sbin/routetor -i vboxnet0 -r 2042  <br />
+Run sudo torstart <your vboxnet0 interface ip> <br />
+Run sudo middlebox.sh in order to route all traffic properly <br />
 Under cuckoo directory run python cuckoo.py -d <br />
 Under cuckoo/web directory run python manage.py runserver 0.0.0.0:8000 <br />
 Under cuckoo/utils directory run python api.py -H 0.0.0.0:8090 <br />
